@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
 
     <!-- StyleSheet -->
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Section -->
+    <header>
+      <nav>
+        <div class="nav-texts">
+          <h1>Interactive</h1>
+          <h3>Geometry Genius</h3>
+        </div>
+        <div class="nav-btn">
+          <button class="btn-blog">Blog</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+        <!-- Main Cards Section -->
+      <section>
+        <div class="cards">
+          <div class="card">
+            <img src="./images/triangle.png" alt="" class="card-img" />
+            <h2 class="card-header">Triangle</h2>
+            <p class="card-text">Area (A) = 0.5 X b X h</p>
+            <div class="card-inputs">
+              <input
+                type="number"
+                name="triangle-breadth"
+                id="triangle-breadth"
+                placeholder="b"
+              />
+              <span>cm</span>
+              <input
+                type="number"
+                name="triangle-height"
+                id="triangle-height"
+                placeholder="h"
+              />
+              <span>cm</span>
+            </div>
+            <button class="btn-card">Calculate</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Javascript file -->
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
