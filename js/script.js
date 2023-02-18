@@ -19,3 +19,23 @@ const getValueFromInputField = function(elementId){
     const value = parseFloat(valueString);
     return value;
 }
+
+// Area of Triangle 
+document.getElementById('btn-triangle').addEventListener('click', function(){
+    const valueBreadth = getValueFromInputField('triangle-breadth');
+    const valueHeight = getValueFromInputField('triangle-height');
+    const areaTriangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
+    console.log(areaTriangle);
+})
+
+// Area of Rectangle
+document.getElementById('btn-rectangle').addEventListener('click', function(){
+    const valueBreadth = getValueFromInputField('rectangle-breadth');
+    const valueHeight = getValueFromInputField('rectangle-height');
+    const areaRectangle = multiplyTwoValues(valueBreadth, valueHeight);
+    console.log(areaRectangle);
+})
+// Area of Parallelogram
+// Area of Rhombus
+// Area of Pentagon
+// Area of Ellipse
