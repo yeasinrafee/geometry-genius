@@ -33,26 +33,58 @@ const clearInputField = function(elementId){
     document.getElementById(elementId).value = "";
 }
 
+
+    const displayAreaResults = function(name, result){
+        let counter = 1;
+
+        // document.getElementById('result-element').innerHTML = `
+        //     <p class="result-name">${counter}. ${name}</p>
+        //     <p class="result-value">${result}cm<sup>2</sup></p>
+        //     <button class="convert-btn">Convert to m<sup>2</sup></button>
+        // `;
+        console.log(document.getElementById('result-element').innerHTML);
+        counter++;
+
+        // const para1 = document.createElement('p').innerHTML = `${counter}. ${name}`;
+        // document.getElementById('result-element').appendChild(para1);
+        
+    }
+
+    // window.onload = function(){
+    //     displayAreaResults();
+    // }
+
 // Area of Triangle 
 document.getElementById('btn-triangle').addEventListener('click', function(){
     const valueBreadth = getValueFromInputField('triangle-breadth');
     const valueHeight = getValueFromInputField('triangle-height');
-    const areaTriangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
+    if((typeof valueBreadth === 'number' && valueBreadth > 0) && (typeof valueHeight === 'number' && valueHeight > 0)){
+        const areaTriangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
+        clearInputField('triangle-breadth');
+        clearInputField('triangle-height');
 
-    clearInputField('triangle-breadth');
-    clearInputField('triangle-height');
-    console.log(areaTriangle);
+        console.log(areaTriangle);
+    }else{
+        alert("Please enter valid positive number.");
+    }
+
+
+    // displayAreaResults('Triangle', areaTriangle);
 })
 
 // Area of Rectangle
 document.getElementById('btn-rectangle').addEventListener('click', function(){
     const valueBreadth = getValueFromInputField('rectangle-breadth');
     const valueHeight = getValueFromInputField('rectangle-height');
-    const areaRectangle = multiplyTwoValues(valueBreadth, valueHeight);
+    if((typeof valueBreadth === 'number' && valueBreadth > 0) && (typeof valueHeight === 'number' && valueHeight > 0)){
+        const areaRectangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
+        clearInputField('rectangle-breadth');
+        clearInputField('rectangle-height');
 
-    clearInputField('rectangle-breadth');
-    clearInputField('rectangle-height');
-    console.log(areaRectangle);
+        console.log(areaRectangle);
+    }else{
+        alert("Please enter valid positive number.");
+    }
 })
 
 // Area of Parallelogram

@@ -98,6 +98,24 @@ nav{
     cursor: pointer;
 }
 
+/* Result Styles */
+.result-element{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 26px;
+    margin-bottom: 30px;
+}
+.convert-btn{
+    padding: 7px 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    background: #1090D8;
+    cursor: pointer;
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 576px) {
     /* It'll add result section in bottom */
