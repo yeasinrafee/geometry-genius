@@ -69,3 +69,9 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
 })
 
 // Area of Ellipse
+document.getElementById('btn-ellipse').addEventListener('click', function(){
+    const valueA = getValueFromTextField('elli-a');
+    const valueB = getValueFromTextField('elli-b');
+    const areaEllipse = parseFloat((3.14 * valueA * valueB).toFixed(2));
+    console.log(areaEllipse);
+})
