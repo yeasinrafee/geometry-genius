@@ -59,5 +59,13 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
     const areaRhombus = multiplyTwoValuesWithHalf(valueD1, valueD2);
     console.log(areaRhombus);
 })
+
 // Area of Pentagon
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+    const valueP = getValueFromTextField('penta-p');
+    const valueB = getValueFromTextField('penta-b');
+    const areaPentagon = multiplyTwoValuesWithHalf(valueP, valueB);
+    console.log(areaPentagon);
+})
+
 // Area of Ellipse
