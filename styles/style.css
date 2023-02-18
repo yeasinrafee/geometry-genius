@@ -97,3 +97,51 @@ nav{
     border: none;
     cursor: pointer;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 576px) {
+    /* It'll add result section in bottom */
+    #card-result{
+        order: 1;
+    }
+    header{
+        margin: 0;
+        width: 100%;
+    }
+    nav{
+        padding: 20px 10px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nav-texts h1{
+        font-size: 26px;
+    }
+    .nav-texts h3{
+        font-size: 16px;
+    }
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+    }
+    .card{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .card-inputs{
+        margin-bottom: 26px;
+    }
+    .card-text{
+        margin-bottom: 12px;
+    }
+    .card img{
+        width: 70%;
+    }
+    .btn-card{
+        padding: 10px 60px;
+    }
+    .btn-blog{
+        padding: 8px 18px;
+    }
+}
