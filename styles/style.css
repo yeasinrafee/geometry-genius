@@ -83,6 +83,9 @@ nav{
     height: 32px;
     padding: 7px 12px;
     margin-right: 10px;
+    border: none;
+    background: #F1F1F1;
+    border-radius: 4px;
 }
 .card-inputs span{
     margin-right: 15px;
