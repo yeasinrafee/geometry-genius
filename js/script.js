@@ -20,6 +20,13 @@ const getValueFromInputField = function(elementId){
     return value;
 }
 
+const getValueFromTextField = function(elementId){
+    const textField = document.getElementById(elementId);
+    const valueString = textField.textContent;
+    const value = parseFloat(valueString);
+    return value;
+}
+
 // Area of Triangle 
 document.getElementById('btn-triangle').addEventListener('click', function(){
     const valueBreadth = getValueFromInputField('triangle-breadth');
