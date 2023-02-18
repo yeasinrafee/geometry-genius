@@ -23,3 +23,22 @@ ol p{
     color: rgba(17, 17, 17, 0.6);
     margin-bottom: 40px;
 }
+.ans{
+    width: 60%;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 576px){
+    section{
+        padding: 10px 5px;
+    }
+    .qna{
+        width: 100%;
+    }
+    ol p{
+        line-height: 1.6;
+    }
+    .ans{
+        width: 80%;
+    }
+}
