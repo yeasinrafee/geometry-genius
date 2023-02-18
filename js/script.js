@@ -33,26 +33,18 @@ const clearInputField = function(elementId){
     document.getElementById(elementId).value = "";
 }
 
-
-    const displayAreaResults = function(name, result){
-        let counter = 1;
-
-        // document.getElementById('result-element').innerHTML = `
-        //     <p class="result-name">${counter}. ${name}</p>
-        //     <p class="result-value">${result}cm<sup>2</sup></p>
-        //     <button class="convert-btn">Convert to m<sup>2</sup></button>
-        // `;
-        console.log(document.getElementById('result-element').innerHTML);
-        counter++;
-
-        // const para1 = document.createElement('p').innerHTML = `${counter}. ${name}`;
-        // document.getElementById('result-element').appendChild(para1);
-        
-    }
-
-    // window.onload = function(){
-    //     displayAreaResults();
-    // }
+// This function will display the result of shapes areas
+let counter = 1;
+ const displayAreaResults = function(name, result){
+    document.getElementById('result-element').innerHTML += `
+        <div  class="result-element">
+            <p class="result-name">${counter}. ${name}</p>
+            <p class="result-value">${result}cm<sup>2</sup></p>
+            <button class="convert-btn">Convert to m<sup>2</sup></button>
+         </div>
+    `;
+    counter++;
+}
 
 // Area of Triangle 
 document.getElementById('btn-triangle').addEventListener('click', function(){
@@ -62,14 +54,12 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
         const areaTriangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
         clearInputField('triangle-breadth');
         clearInputField('triangle-height');
-
-        console.log(areaTriangle);
+        displayAreaResults('Triangle', areaTriangle);
     }else{
         alert("Please enter valid positive number.");
     }
 
 
-    // displayAreaResults('Triangle', areaTriangle);
 })
 
 // Area of Rectangle
@@ -80,8 +70,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
         const areaRectangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
         clearInputField('rectangle-breadth');
         clearInputField('rectangle-height');
-
-        console.log(areaRectangle);
+        displayAreaResults('Rectangle', areaRectangle);
     }else{
         alert("Please enter valid positive number.");
     }
@@ -92,7 +81,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
     const valueBreadth = getValueFromTextField('para-b');
     const valueHeight = getValueFromTextField('para-h');
     const areaParallelogram = multiplyTwoValues(valueBreadth, valueHeight);
-    console.log(areaParallelogram);
+    displayAreaResults('Parallelogram', areaParallelogram);
 })
 
 // Area of Rhombus
@@ -100,7 +89,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
     const valueD1 = getValueFromTextField('rhom-d1');
     const valueD2 = getValueFromTextField('rhom-d2');
     const areaRhombus = multiplyTwoValuesWithHalf(valueD1, valueD2);
-    console.log(areaRhombus);
+    displayAreaResults('Rhombus', areaRhombus);
 })
 
 // Area of Pentagon
@@ -108,7 +97,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
     const valueP = getValueFromTextField('penta-p');
     const valueB = getValueFromTextField('penta-b');
     const areaPentagon = multiplyTwoValuesWithHalf(valueP, valueB);
-    console.log(areaPentagon);
+    displayAreaResults('Pentagon', areaPentagon);
 })
 
 // Area of Ellipse
@@ -116,5 +105,5 @@ document.getElementById('btn-ellipse').addEventListener('click', function(){
     const valueA = getValueFromTextField('elli-a');
     const valueB = getValueFromTextField('elli-b');
     const areaEllipse = parseFloat((3.14 * valueA * valueB).toFixed(2));
-    console.log(areaEllipse);
+    displayAreaResults('Ellipse', areaEllipse);
 })
