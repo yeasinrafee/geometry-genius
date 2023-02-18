@@ -28,11 +28,19 @@ const getValueFromTextField = function(elementId){
     return value;
 }
 
+// It'll take an ID name of an input Field as parameter and clear the field value
+const clearInputField = function(elementId){
+    document.getElementById(elementId).value = "";
+}
+
 // Area of Triangle 
 document.getElementById('btn-triangle').addEventListener('click', function(){
     const valueBreadth = getValueFromInputField('triangle-breadth');
     const valueHeight = getValueFromInputField('triangle-height');
     const areaTriangle = multiplyTwoValuesWithHalf(valueBreadth, valueHeight);
+
+    clearInputField('triangle-breadth');
+    clearInputField('triangle-height');
     console.log(areaTriangle);
 })
 
@@ -41,6 +49,9 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
     const valueBreadth = getValueFromInputField('rectangle-breadth');
     const valueHeight = getValueFromInputField('rectangle-height');
     const areaRectangle = multiplyTwoValues(valueBreadth, valueHeight);
+
+    clearInputField('rectangle-breadth');
+    clearInputField('rectangle-height');
     console.log(areaRectangle);
 })
 
