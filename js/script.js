@@ -51,6 +51,13 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
     const areaParallelogram = multiplyTwoValues(valueBreadth, valueHeight);
     console.log(areaParallelogram);
 })
+
 // Area of Rhombus
+document.getElementById('btn-rhombus').addEventListener('click', function(){
+    const valueD1 = getValueFromTextField('rhom-d1');
+    const valueD2 = getValueFromTextField('rhom-d2');
+    const areaRhombus = multiplyTwoValuesWithHalf(valueD1, valueD2);
+    console.log(areaRhombus);
+})
 // Area of Pentagon
 // Area of Ellipse
