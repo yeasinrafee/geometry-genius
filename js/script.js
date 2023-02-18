@@ -20,6 +20,7 @@ const getValueFromInputField = function(elementId){
     return value;
 }
 
+// It'll take an ID name of a text Field as parameter and return it's value as floating Number
 const getValueFromTextField = function(elementId){
     const textField = document.getElementById(elementId);
     const valueString = textField.textContent;
@@ -42,7 +43,14 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
     const areaRectangle = multiplyTwoValues(valueBreadth, valueHeight);
     console.log(areaRectangle);
 })
+
 // Area of Parallelogram
+document.getElementById('btn-parallelogram').addEventListener('click', function(){
+    const valueBreadth = getValueFromTextField('para-b');
+    const valueHeight = getValueFromTextField('para-h');
+    const areaParallelogram = multiplyTwoValues(valueBreadth, valueHeight);
+    console.log(areaParallelogram);
+})
 // Area of Rhombus
 // Area of Pentagon
 // Area of Ellipse
